@@ -34,6 +34,11 @@ Add version control to the dataset folder.
 `` dvc add data_given\winequality.csv
 ``
 
+``git add .``
+
+``git commit -m "commit message"``
+
+
 
 
 
