@@ -38,6 +38,17 @@ Add version control to the dataset folder.
 
 ``git commit -m "commit message"``
 
+"Add git repo"
+
+``git remote add origin https://github.com/Rahul-Shedge/MLops_wine_data.git
+``
+
+``git branch -M main
+``
+
+``git push -u origin main
+``
+
 
 
 
