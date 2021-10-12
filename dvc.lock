@@ -35,3 +35,29 @@ stages:
     - path: data\processed\train_winequality.csv
       md5: 7edaa234f3e62a8709c2f2fa012adef8
       size: 74880
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_winequality.csv
+      md5: bba06cbfd29966b29d6350ce075d45cc
+      size: 18864
+    - path: data/processed/train_winequality.csv
+      md5: 7edaa234f3e62a8709c2f2fa012adef8
+      size: 74880
+    - path: src/train_and_evaluate.py
+      md5: 8468f1cd33291c41b259956fa2770d11
+      size: 2648
+    params:
+      params.yaml:
+        estimators.ElasticNet.params.alpha: 0.9
+        estimators.ElasticNet.params.l1_ratio: 0.4
+    outs:
+    - path: report/params.json
+      md5: a4aab0167612f21a6085dd05cfafdbf6
+      size: 44
+    - path: report/scores.json
+      md5: 0cfd4f1bcb15f98f0557d560014725c2
+      size: 99
+    - path: saved_models/model.joblib
+      md5: e894d066c10eaae5a9802ae57ecaf6be
+      size: 1334
