@@ -1,6 +1,6 @@
 action: GLOB, msg: packaging
 cwd: D:\Data_Science\ML ineuron\ML_Ops
-cmd: 'D:\Python\envs\ML_Ops\python.exe' setup.py sdist --formats=zip --dist-dir 'D:\Data_Science\ML ineuron\ML_Ops\.tox\dist'
+cmd: 'D:\Python\envs\ML_Ops\python.exe' setup.py sdist --formats=zip --dist-dir '.tox\dist'
 running sdist
 running egg_info
 writing src.egg-info\PKG-INFO
@@ -29,8 +29,7 @@ copying src.egg-info\dependency_links.txt -> src-0.0.1\src.egg-info
 copying src.egg-info\top_level.txt -> src-0.0.1\src.egg-info
 copying test\test_config.py -> src-0.0.1\test
 Writing src-0.0.1\setup.cfg
-creating D:\Data_Science\ML ineuron\ML_Ops\.tox\dist
-creating 'D:\Data_Science\ML ineuron\ML_Ops\.tox\dist\src-0.0.1.zip' and adding 'src-0.0.1' to it
+creating '.tox\dist\src-0.0.1.zip' and adding 'src-0.0.1' to it
 adding 'src-0.0.1'
 adding 'src-0.0.1\src.egg-info'
 adding 'src-0.0.1\test'

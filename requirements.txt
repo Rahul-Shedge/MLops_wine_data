@@ -9,3 +9,4 @@ pandas
 #yaml
 pytest
 tox
+flake8
