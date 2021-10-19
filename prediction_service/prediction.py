@@ -84,8 +84,15 @@ def api_response(dic_request):
             response = predict(data)
             response = {"response":response}
             return response
+    except NotInRange as e:
+        response = {"the_exected_range": get_schema(), "response": str(e)}
+        return response
+
+    except NotInCols as e:
+        response = {"the_exected_cols": get_schema().keys(), "response": str(e)}
+        return response
+
+
     except Exception as e:
-        #print(e)
-        response = {"The expected range: ", get_schema(), "response :", str(e) }
-        #error = {"error": "Something went wrong!! Try again"}
+        response = {"response": str(e)}
         return response
